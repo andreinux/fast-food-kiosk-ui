@@ -94,7 +94,7 @@ h1 {
     color: rgb(200, 125, 0);
  }
 
- #category-container {
+ .category-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -141,4 +141,47 @@ h3 {
 }
 .category-btn:hover {
     transform: translateY(-2px);    
+}
+
+#burger-items {
+    display: flex;
+    background-color:rgb(210, 191, 144);
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+
+#cheese-burger {
+    width: 25%;
+    height: auto;
+}
+
+#burger-itemsBox {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+
+#burger-martini {
+    width: 25%;
+    height: auto;
+    background-color: rgb(223, 159, 38);
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+#price {
+    color: orange;
+}
+#martini-price {
+    color: rgb(165, 48, 48);
+}
+
+
+/*hotdogs*/
+#hotdogs {
+    
 }
