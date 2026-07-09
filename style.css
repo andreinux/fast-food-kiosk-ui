@@ -151,23 +151,25 @@ h3 {
     flex-direction: column;
 }
 
-
-#cheese-burger {
-    width: 25%;
-    height: auto;
+#cheeseBurger-itembtn {
+    height: 300px;
 }
 
-#burger-itemsBox {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
+#cheeseBurger-image {
+    height: 200px;
 }
 
-#burger-martini {
-    width: 25%;
-    height: auto;
-    background-color: rgb(223, 159, 38);
+
+#martini-itembtn {
+    height: 300px;
 }
+
+#martini-image {
+    height: 200px;
+}
+
+
+
 
 .name {
     font-size: 2rem;
@@ -176,12 +178,86 @@ h3 {
 #price {
     color: orange;
 }
-#martini-price {
-    color: rgb(165, 48, 48);
+
+
+/*hotdogs section*/
+
+#hotdogs {
+    display: flex;
+    background-color:rgb(210, 191, 144);
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
 }
 
 
-/*hotdogs*/
-#hotdogs {
-    
+#footlong {
+    height: 300px;
+}
+#footlong-image {
+    height: 200px;
+}
+
+#hotdog-itembtn {
+    height: 300px;
+}
+#hotdog-image {
+    height: 200px;
+}
+/*fries section */
+
+#friesSection {
+    display: flex;
+    background-color:rgb(210, 191, 144);
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+#friesSmall-itembtn {
+    height: 300px;
+}
+#friesSmall-image {
+    height: 200px;
+}
+
+#friesLarge-itembtn {
+    height: 300px;
+}
+#friesLarge-image {
+    height: 200px;
+}
+/*drinks section */
+
+#drinksSection {
+    display: flex;
+    background-color:rgb(210, 191, 144);
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+#icedtea-itembtn {
+    height: 300px;
+}
+#icedtea-image {
+    height: 200px;
+}
+#mocha-itembtn {
+    height: 300px;
+}
+#mocha-image {
+    height: 200px;
+}
+#taro-itembtn {
+    height: 300px;
+}
+#taro-image {
+    height: 200px;
+}
+#matcha-itembtn {
+    height: 300px;
+}
+#matcha-image {
+    height: 200px;
 }

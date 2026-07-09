@@ -29,4 +29,20 @@ hamburgerBtn.addEventListener("click", ()=> {
 
 
 
+let hotdogBtn = document.querySelector("#hotdog-btn");
 
+hotdogBtn.addEventListener("click", ()=> {
+    showSection("hotdogs");
+})
+
+let friesBtn = document.querySelector("#fries-btn");
+
+friesBtn.addEventListener("click", ()=> {
+    showSection("friesSection");
+})
+
+let drinksBtn = document.querySelector("#drinks-btn");
+
+drinksBtn.addEventListener("click", ()=> {
+    showSection("drinksSection");
+})
