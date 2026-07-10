@@ -147,6 +147,7 @@ h1 {
     border: none;
     transition: 0.3s ease;
 }
+
 .category-images {
     width: 80%;
     height: 80%;
@@ -166,7 +167,10 @@ h3 {
 .category-btn:hover {
     transform: translateY(-2px);    
 }
-
+.category-btn:active {
+    transform: scale(0.97);
+    transition: 0.1s ease;
+}
 #burger-items {
     display: flex;
     background-color:rgb(210, 191, 144);
