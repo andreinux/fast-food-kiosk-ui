@@ -157,3 +157,11 @@ matchaItembtn.addEventListener("click", ()=> {
     matchaQuantity += 1;
     matchaDisplayQuantity.textContent = matchaQuantity;
 })
+
+let addToOrderBtn = document.querySelectorAll(".add-to-orderBtn");
+
+addToOrderBtn.forEach(button => {
+    button.addEventListener("click" , ()=> {
+        showSection("categories");
+    })
+})

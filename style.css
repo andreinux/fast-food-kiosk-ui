@@ -310,3 +310,26 @@ h3 {
     text-align: center;
 }
 
+.add-to-orderBtn {
+     background-color: rgb(196, 22, 22);
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 59px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    align-self: center;
+    box-shadow: 0 5px 15px rgba(196, 22, 22, 0.3);
+    transition: 0.3s ease;
+    align-self: flex-end;
+    margin-top: 35px;
+    margin-right: 20px;
+}
+
+.add-to-orderBtn:hover {
+     opacity: 0.9;
+}
+.add-to-orderBtn:active {
+    transform: scale(0.97);
+}
