@@ -386,9 +386,28 @@ h3 {
     background-color:rgb(210, 191, 144);
     height: 100vh;
     width: 100%;
+    flex-direction: column;
 }
 
 #checkout-section > #category-topbox {  
     height: 20vh;   
 }
 
+#checkout-section .backto-menubtn {
+    width: 300px;
+    margin-right: 20px;
+}
+
+#order-display {
+    margin: 0 auto;
+    background-color: rgb(221, 210, 210);
+    border-radius: 10px;
+    width: 75%;
+    height: 80vh;
+}
+
+#order-display h2 {
+    text-align: left;
+    padding: 10px;
+    color: rgb(138, 14, 14);
+}

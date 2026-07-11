@@ -56,64 +56,58 @@ backtoMenuBtn.forEach(button=> {
     })
 })
 
-//objects for each item
-
-let cheeseBurgerObj = {
+//array of objects for each item
+let menuArray = [
+cheeseBurgerObj = {
     item: "CheeseBurger",
     price:30,
     quantity: 0,
-}
-
-let martiniObj ={
+},
+martiniObj ={
     item: "Martini Burger",
     price:50,
     quantity: 0,
-}
-
-let hotdogObj ={
+},
+hotdogObj ={
     item: "Cheesy Hotdog",
     price:39,
     quantity: 0,
-}
-let footLongObj ={
+},
+footLongObj ={
     item: "Footlong",
     price:49,
     quantity: 0,
-}
-
-let SfriesObj ={
+},SfriesObj ={
     item: "Fries Small",
     price:30,
     quantity: 0,
-}
-let LfriesObj ={
+},
+LfriesObj ={
     item: "Fries Large",
     price:50,
     quantity: 0,
-}
-let teaObj ={
+},
+teaObj ={
     item: "Iced Tea",
     price:25,
     quantity: 0,
-}
-
-let mochaObj ={
+},
+mochaObj ={
     item: "Iced Mocha Latte",
     price:79,
     quantity: 0,
-}
-
-let taroObj ={
+},
+taroObj ={
     item: "Taro Milk Tea",
     price:79,
     quantity: 0,
-}
-
-let matchaObj ={
+},
+matchaObj ={
     item: "Matcha",
     price:79,
     quantity: 0,
 }
+]
 
 //item button hnadlers
 let CBdisplayquantity = document.querySelector("#cheeseBurger-quantity");
@@ -229,4 +223,13 @@ let checkoutBtn = document.querySelector("#checkout-btn");
 
 checkoutBtn.addEventListener("click", ()=> {
     showSection("checkout-section");
+    
+   let orderArray = menuArray.filter(item=> item.quantity > 0);
+   console.log(orderArray);
+
+   
+
 })
+
+//filter array of objects
+
