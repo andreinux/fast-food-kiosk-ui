@@ -411,3 +411,26 @@ h3 {
     padding: 10px;
     color: rgb(138, 14, 14);
 }
+
+
+/* orderDisplay*/
+
+.orderCard {
+    background-color: rgb(171, 162, 162);
+    font-size: 1.5rem;  
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 95%;
+    border-radius: 10px;
+    margin-left: 5px;
+    display: flex;
+    position: relative;
+}
+.quantity {
+    position: absolute;
+    left: 500px;
+}
+.price {
+    position: absolute;
+    left: 250px;
+}

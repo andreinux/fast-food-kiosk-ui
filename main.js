@@ -217,6 +217,8 @@ cancelBtn.addEventListener("click" , ()=> {
     showSection("welcome");
 })
 
+let orderArray = []
+let orderDisplay = document.querySelector("#order-display");
 
 //checkout section
 let checkoutBtn = document.querySelector("#checkout-btn");
@@ -224,12 +226,32 @@ let checkoutBtn = document.querySelector("#checkout-btn");
 checkoutBtn.addEventListener("click", ()=> {
     showSection("checkout-section");
     
-   let orderArray = menuArray.filter(item=> item.quantity > 0);
+   orderArray = menuArray.filter(item=> item.quantity > 0);
    console.log(orderArray);
 
-   
+   orderArray.forEach(order=> {
+    let orderCard = document.createElement("div");
+    orderCard.classList.add("orderCard");
 
+    let item = document.createElement("p");
+    item.textContent =  order.item;
+    orderCard.appendChild(item);
+
+    
+    let price = document.createElement("p");
+    price.textContent = "Price: " + order.price;
+    price.classList.add("price");
+    orderCard.appendChild(price);
+
+
+    let quantity = document.createElement("p");
+    quantity.textContent = "Quantity: " + order.quantity;
+    quantity.classList.add("quantity");
+    orderCard.appendChild(quantity);
+
+    orderDisplay.appendChild(orderCard);
+
+    });
 })
 
-//filter array of objects
-
+//showing orders in checkout section
