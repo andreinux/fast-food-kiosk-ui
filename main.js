@@ -249,6 +249,11 @@ checkoutBtn.addEventListener("click", ()=> {
     quantity.classList.add("quantity");
     orderCard.appendChild(quantity);
 
+    let subtotal = document.createElement("p");
+    subtotal.classList.add("subtotal");
+    subtotal.textContent = "Subtotal: " + order.price * order.quantity;
+    orderCard.appendChild(subtotal);
+
     orderDisplay.appendChild(orderCard);
 
     });

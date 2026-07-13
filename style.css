@@ -434,3 +434,7 @@ h3 {
     position: absolute;
     left: 250px;
 }
+.subtotal {
+    position: absolute;
+    left: 750px;
+}
