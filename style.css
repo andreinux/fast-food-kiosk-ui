@@ -443,3 +443,7 @@ h3 {
     position: absolute;
     left: 750px;
 }
+
+#checkout-section #cancelBtn {
+    margin-top: 15px;
+}

@@ -214,7 +214,6 @@ addToOrderBtn.forEach(button => {
     })
 })
 
-let cancelBtn = document.querySelector("#cancelBtn");
 
 
 let orderArray = []
@@ -267,9 +266,12 @@ addMorebtn.addEventListener("click", ()=> {
     orderDisplay.textContent = "";  
 })
 
+let cancelBtn = document.querySelectorAll("#cancelBtn");
 
-cancelBtn.addEventListener("click" , ()=> {
+cancelBtn.forEach(btn=> {
+    btn.addEventListener("click" , ()=> {
     showSection("welcome");
+
    
     menuArray.forEach(item=> {
         item.quantity = 0;
@@ -290,4 +292,7 @@ cancelBtn.addEventListener("click" , ()=> {
 
     orderArray=[];
     orderDisplay.textContent="";
+
+    console.log(orderArray);
 })
+});
