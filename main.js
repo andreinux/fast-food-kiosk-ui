@@ -254,10 +254,37 @@ checkoutBtn.addEventListener("click", ()=> {
     subtotal.textContent = "Subtotal: " + order.price * order.quantity;
     orderCard.appendChild(subtotal);
 
+
     orderDisplay.appendChild(orderCard);
 
     });
+
+
+    let totalCard = document.createElement("div");
+    totalCard.classList.add("totalCard");
+
+    let totalAmmount = document.createElement("p");
+    totalAmmount.classList.add("totalAmmount");
+    
+    let totalPrice = orderArray.reduce((accu,curr)=> {
+
+        let itemSubTotal = curr.price * curr.quantity;
+
+        return accu + itemSubTotal;
+    },0);
+
+    totalAmmount.textContent = "Total Ammount: " + totalPrice;
+    console.log(totalPrice);
+
+    orderDisplay.appendChild(totalCard);
+     totalCard.appendChild(totalAmmount);
+
+    
 })
+
+
+
+
 
 const addMorebtn = document.querySelector("#add-morebtn");
 

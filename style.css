@@ -430,6 +430,7 @@ h3 {
 }
 .item{
     margin-left: 10px;
+    color:  rgb(138, 14, 14);
 }
 .quantity {
     position: absolute;
@@ -447,3 +448,24 @@ h3 {
 #checkout-section #cancelBtn {
     margin-top: 15px;
 }
+
+.totalCard {
+    background-color: rgb(171, 162, 162);
+    font-size: 1.5rem;  
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 95%;
+    border-radius: 10px;
+    margin-left: 5px;
+    position: relative;
+    margin-top: 5px;
+}
+
+.totalAmmount {
+   position: absolute;
+   left: 750px;
+   color:  rgb(138, 14, 14);
+}
+
+ /* margin-right: 116px; 
+    color: rgb(243, 9, 9);
