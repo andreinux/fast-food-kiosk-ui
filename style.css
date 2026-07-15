@@ -81,6 +81,7 @@ h1 {
     height: 100vh;
     width: 100%;
     flex-direction: column;
+    overflow: hidden;
  }
  #logo-left {
     height: 100px;
@@ -177,6 +178,7 @@ h3 {
     height: 100vh;
     width: 100%;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #cheeseBurger-itembtn {
@@ -216,6 +218,7 @@ h3 {
     height: 100vh;
     width: 100%;
     flex-direction: column;
+    overflow: hidden;
 }
 
 
@@ -240,6 +243,7 @@ h3 {
     height: 100vh;
     width: 100%;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #friesSmall-itembtn {
@@ -263,6 +267,7 @@ h3 {
     height: 100vh;
     width: 100%;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #icedtea-itembtn {
@@ -388,6 +393,7 @@ h3 {
     height: 100vh;
     width: 100%;
     flex-direction: column;
+    overflow: hidden;
 }
 
 #checkout-section > #category-topbox {  
@@ -506,4 +512,30 @@ h3 {
     margin-top: 20px;
     text-align: center;
     border-radius: 10px;
+}
+
+
+/*cancel certain item buttom*/
+
+.cancel-item {
+    color: white;
+    position: absolute;
+    left: 1000px;
+    border-radius: 10px;
+    width: 25px;
+    border: none;
+    height: 28px;
+    align-self: center;
+    font-weight: bold;
+    background-color: rgb(138, 14, 14);
+    box-shadow:  0 0 5px rgba(196, 22, 22, 0.3);
+    transition: 0.3s ease;
+}
+
+.cancel-item:hover {
+    opacity:0.7;
+}
+
+.cancel-item:active {
+    transform: scale(0.97);
 }

@@ -58,58 +58,87 @@ backtoMenuBtn.forEach(button=> {
 
 
 
-
 //array of objects for each item
 let menuArray = [
 cheeseBurgerObj = {
     item: "CheeseBurger",
     price:30,
     quantity: 0,
+    removeItem() {
+        this.quantity = 0;
+    },
 },
 martiniObj ={
     item: "Martini Burger",
     price:50,
     quantity: 0,
+    removeItem() {
+        this.quantity = 0;
+    },
 },
 hotdogObj ={
     item: "Cheesy Hotdog",
     price:39,
     quantity: 0,
+    removeItem() {
+        this.quantity = 0;
+    },
 },
 footLongObj ={
     item: "Footlong",
     price:49,
     quantity: 0,
+    removeItem() {
+        this.quantity = 0;
+    },
 },
 SfriesObj ={
     item: "Fries Small",
     price:30,
     quantity: 0,
+    removeItem() {
+        this.quantity = 0;
+    },
 },
 LfriesObj ={
     item: "Fries Large",
     price:50,
     quantity: 0,
+    removeItem() {
+        this.quantity = 0;
+    },
 },
 teaObj ={
     item: "Iced Tea",
     price:25,
     quantity: 0,
+    removeItem() {
+        this.quantity = 0;
+    },
 },
 mochaObj ={
     item: "Iced Mocha Latte",
     price:79,
     quantity: 0,
+    removeItem() {
+        this.quantity = 0;
+    },
 },
 taroObj ={
     item: "Taro Milk Tea",
     price:79,
     quantity: 0,
+    removeItem() {
+        this.quantity = 0;
+    },
 },
 matchaObj ={
     item: "Matcha",
     price:79,
     quantity: 0,
+    removeItem() {
+        this.quantity = 0;
+    },
 }
 ]
 
@@ -304,72 +333,8 @@ let checkoutBtn = document.querySelector("#checkout-btn");
 
 checkoutBtn.addEventListener("click", ()=> {
     showSection("checkout-section");
-    
-   orderArray = menuArray.filter(item=> item.quantity > 0);
-   console.log(orderArray);
-
-   orderArray.forEach(order=> {
-    let orderCard = document.createElement("div");
-    orderCard.classList.add("orderCard");
-
-    let item = document.createElement("p");
-    item.textContent =  order.item;
-    item.classList.add("item");
-    orderCard.appendChild(item);
-
-    
-    let price = document.createElement("p");
-    price.textContent = "Price: " + order.price;
-    price.classList.add("price");
-    orderCard.appendChild(price);
-
-
-    let quantity = document.createElement("p");
-    quantity.textContent = "Quantity: " + order.quantity;
-    quantity.classList.add("quantity");
-    orderCard.appendChild(quantity);
-
-    let subtotal = document.createElement("p");
-    subtotal.classList.add("subtotal");
-    subtotal.textContent = "Subtotal: " + order.price * order.quantity;
-    orderCard.appendChild(subtotal);
-
-
-    orderDisplay.appendChild(orderCard);
-
-    });
-
-
-    let totalCard = document.createElement("div");
-    totalCard.classList.add("totalCard");
-
-    let totalAmmount = document.createElement("p");
-    totalAmmount.classList.add("totalAmmount");
-    
-    let totalPrice = orderArray.reduce((accu,curr)=> {
-
-        let itemSubTotal = curr.price * curr.quantity;
-
-        return accu + itemSubTotal;
-    },0);
-
-    totalAmmount.textContent = "Total Ammount: " + totalPrice;
-    console.log(totalPrice);
-
-    orderDisplay.appendChild(totalCard);
-     totalCard.appendChild(totalAmmount);
-
-
-     if (orderArray.length === 0) {
-        let noOrderLabel = document.createElement("h2");
-        noOrderLabel.classList.add("no-order-label");
-        noOrderLabel.textContent = "You have no orders placed";
-        orderDisplay.append(noOrderLabel);
-
-        totalCard.textContent = "";
-     }
-
-
+    renderCheckout();
+  
 })
 
 
@@ -411,3 +376,99 @@ cancelBtn.forEach(btn=> {
 });
 
 
+function renderQuantity () {
+    CBdisplayquantity.textContent = cheeseBurgerObj.quantity;
+    martiniDisplayQuantity.textContent = martiniObj.quantity;
+     hdDisplayquantity.textContent = hotdogObj.quantity;
+     flDisplayQuantity.textContent = footLongObj.quantity; 
+     SfriesDisplayQuantity.textContent = SfriesObj.quantity;
+     LfriesDisplayQuantity.textContent = LfriesObj.quantity;
+     itDisplayQuantity.textContent = teaObj.quantity;
+    mochaDisplayQuantity.textContent = mochaObj.quantity;
+    taroDisplayQuantity.textContent = taroObj.quantity;
+    matchaDisplayQuantity.textContent = matchaObj.quantity;
+}
+
+function renderCheckout () {
+      orderDisplay.innerHTML = "";
+
+   orderArray = menuArray.filter(item=> item.quantity > 0);
+   console.log(orderArray);
+
+   orderArray.forEach(order=> {
+    let orderCard = document.createElement("div");
+    orderCard.classList.add("orderCard");
+
+    let item = document.createElement("p");
+    item.textContent =  order.item;
+    item.classList.add("item");
+    orderCard.appendChild(item);
+
+    
+    let price = document.createElement("p");
+    price.textContent = "Price: " + order.price;
+    price.classList.add("price");
+    orderCard.appendChild(price);
+
+
+    let quantity = document.createElement("p");
+    quantity.textContent = "Quantity: " + order.quantity;
+    quantity.classList.add("quantity");
+    orderCard.appendChild(quantity);
+
+    let subtotal = document.createElement("p");
+    subtotal.classList.add("subtotal");
+    subtotal.textContent = "Subtotal: " + order.price * order.quantity;
+    orderCard.appendChild(subtotal);
+
+
+    orderDisplay.appendChild(orderCard);
+
+    //cancel certain order
+
+    let cancelItemBtn = document.createElement("button");
+    cancelItemBtn.classList.add("cancel-item");
+    cancelItemBtn.textContent = "X";
+    orderCard.appendChild(cancelItemBtn);
+
+    //remove function block
+
+    cancelItemBtn.addEventListener("click" , ()=> {
+        order.removeItem();
+        renderQuantity();
+        renderCheckout();
+    })
+
+    });
+
+
+    let totalCard = document.createElement("div");
+    totalCard.classList.add("totalCard");
+
+    let totalAmmount = document.createElement("p");
+    totalAmmount.classList.add("totalAmmount");
+    
+    let totalPrice = orderArray.reduce((accu,curr)=> {
+
+        let itemSubTotal = curr.price * curr.quantity;
+
+        return accu + itemSubTotal;
+    },0);
+
+    totalAmmount.textContent = "Total Ammount: " + totalPrice;
+    console.log(totalPrice);
+
+    orderDisplay.appendChild(totalCard);
+     totalCard.appendChild(totalAmmount);
+
+
+     if (orderArray.length === 0) {
+        let noOrderLabel = document.createElement("h2");
+        noOrderLabel.classList.add("no-order-label");
+        noOrderLabel.textContent = "You have no orders placed";
+        orderDisplay.append(noOrderLabel);
+
+        totalCard.textContent = "";
+     } 
+
+}
