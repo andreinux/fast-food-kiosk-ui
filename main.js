@@ -299,12 +299,6 @@ rqMatchaBtn.addEventListener("click" , ()=> {
 });
 
 
-
-
-
-
-
-
 //checkout section
 let checkoutBtn = document.querySelector("#checkout-btn");
 
@@ -366,10 +360,17 @@ checkoutBtn.addEventListener("click", ()=> {
      totalCard.appendChild(totalAmmount);
 
 
+     if (orderArray.length === 0) {
+        let noOrderLabel = document.createElement("h2");
+        noOrderLabel.classList.add("no-order-label");
+        noOrderLabel.textContent = "You have no orders placed";
+        orderDisplay.append(noOrderLabel);
+
+        totalCard.textContent = "";
+     }
+
+
 })
-
-
-
 
 
 const addMorebtn = document.querySelector("#add-morebtn");
@@ -385,7 +386,6 @@ cancelBtn.forEach(btn=> {
     btn.addEventListener("click" , ()=> {
     showSection("welcome");
 
-   
     menuArray.forEach(item=> {
         item.quantity = 0;
     })
