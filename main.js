@@ -481,7 +481,12 @@ function renderCheckout () {
 let placeOrderBtn = document.querySelector("#place-order-btn");
 
 placeOrderBtn.addEventListener("click" , ()=> {
+    if (orderArray.length === 0){
+        alert("Please enter an item you'd like to order first before placing an order. Thank you.");
+        renderCheckout();
+    }else {
     showSection("dine-takeout-section");
+    }
 });
 
 
