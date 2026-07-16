@@ -539,3 +539,104 @@ h3 {
 .cancel-item:active {
     transform: scale(0.97);
 }
+
+#place-order-btn {
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: rgb(196, 22, 22);
+    box-shadow: 0 5px 15px rgba(196, 22, 22, 0.3);
+    border-radius: 10px;
+    border: none;
+    width: 300px;
+    height: 50px;
+    transition: 0.3s ease;
+    position: relative;
+    left: 900px;
+}
+
+#place-order-btn:hover {
+    transform: translateY(-1px);
+}
+
+#place-order-btn:active {
+    transform: scale(0.97);
+}
+
+/* dine/takeout section*/
+
+#dine-takeout-section {
+     display: flex;
+    background-color:rgb(210, 191, 144);
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#dine-takeout-btn-container{
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+}
+
+.orderTypeImages {
+    width:90%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+.orderTypeBtns {
+    width: 35%;
+    height: 80%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(249, 174, 35, 0.4);
+    transition: 0.3s ease;
+}
+
+.orderTypeBtns:hover {
+    transform: translateY(-2px);
+}
+.orderTypeBtns:active {
+    transform: scale(0.97);
+}
+
+#order-placed-section {
+     display: flex;
+    background-color:rgb(210, 191, 144);
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    margin-top: 110px;
+}
+
+#info-container > h4 {
+    background-color:rgb(220, 211, 211);
+    width: 40%;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom:50px;
+    border-radius: 10px;
+    font-size: 2.5rem;
+    color: rgb(138, 14, 14);
+}
+
+#info-container > h3 {
+    color: rgb(200, 125, 0);
+}

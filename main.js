@@ -389,6 +389,7 @@ function renderQuantity () {
     matchaDisplayQuantity.textContent = matchaObj.quantity;
 }
 
+//render checkout
 function renderCheckout () {
       orderDisplay.innerHTML = "";
 
@@ -431,6 +432,7 @@ function renderCheckout () {
     cancelItemBtn.textContent = "X";
     orderCard.appendChild(cancelItemBtn);
 
+    
     //remove function block
 
     cancelItemBtn.addEventListener("click" , ()=> {
@@ -471,4 +473,33 @@ function renderCheckout () {
         totalCard.textContent = "";
      } 
 
+}
+
+
+//place-order 
+
+let placeOrderBtn = document.querySelector("#place-order-btn");
+
+placeOrderBtn.addEventListener("click" , ()=> {
+    showSection("dine-takeout-section");
+});
+
+
+let orderTypeBtns = document.querySelectorAll(".orderTypeBtns");
+
+orderTypeBtns.forEach(btn=> {
+    btn.addEventListener("click" , ()=> {
+        showSection("order-placed-section");
+        orderNumber();
+    })
+})
+
+//random 2 digits for order numbe generation
+function orderNumber (){
+    let a = Math.round(Math.random() * 99);
+
+    console.log(a);
+
+    let orderNumber = document.querySelector("#orderNumber");
+    orderNumber.textContent =  a;
 }
