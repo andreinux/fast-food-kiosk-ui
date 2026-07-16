@@ -640,3 +640,9 @@ h3 {
 #info-container > h3 {
     color: rgb(200, 125, 0);
 }
+
+#order-placed-section > #cancelBtn{
+    margin: 0 auto;
+    margin-top: 150px;
+
+}
